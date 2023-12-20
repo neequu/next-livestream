@@ -6,8 +6,6 @@ export default function Home() {
     <div
       className="
   px-2 md:px-2"
-    >
-      <Button>test</Button>
-    </div>
+    ></div>
   );
 }
