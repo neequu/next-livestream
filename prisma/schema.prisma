@@ -12,11 +12,20 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  name      String?
-  email     String?  @unique
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @updatedAt @map(name: "updated_at")
+  id             String  @id @default(uuid())
+  username       String  @unique
+  imageUrl       String  @db.Text
+  externalUserId String  @unique
+  bio            String? @db.Text
 
-  @@map(name: "users")
+  // following Follow[] @relation("Following")
+  // followedBy Follow[] @relation("FollowedBy")
+
+  // blocking Block[] @relation("Blocking")
+  // blockedBy Block[] @relation("BlockedBy")
+
+  // stream Stream?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

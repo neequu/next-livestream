@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import TheHeader from "@/components/TheHeader";
 import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,11 +22,11 @@ export default function RootLayout({
       <body className={`${inter.className} h-full`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
+          storageKey="next-live-theme"
           enableSystem
-          disableTransitionOnChange
         >
-          <ClerkProvider>
+          <ClerkProvider >
           {children}
           </ClerkProvider>
         </ThemeProvider>
