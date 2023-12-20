@@ -1,12 +1,7 @@
-import Image from "next/image";
-import prisma from "@/lib/prisma";
-
-async function getPost() {
-  const users = await prisma.user.findMany();
-  return users;
-}
+import TheHeader from "@/components/TheHeader";
 
 export default async function Home() {
-  const users = await getPost();
-  return <div>{JSON.stringify(users)}</div>;
+  return <div>
+          <TheHeader />
+  </div>;
 }
