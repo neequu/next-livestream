@@ -1,11 +1,6 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
-export default function Home() {
-  return (
-    <div
-      className="
-  px-2 md:px-2"
-    ></div>
-  );
+export default async function Home() {
+  const pets = ["zxc"];
+  return <div>{JSON.stringify(pets)}</div>;
 }

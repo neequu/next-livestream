@@ -7,16 +7,16 @@ import { useTheme } from "next-themes";
 import React from "react";
 
 const DarkToggle = () => {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <div>
-      <Button onClick={() => setTheme("dark")}>
+      <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
         <Moon />
       </Button>
-      <Button onClick={() => setTheme("light")}>
+      {/* <Button onClick={() => setTheme("light")}>
         <Sun />
-      </Button>
+      </Button> */}
     </div>
   );
 };
