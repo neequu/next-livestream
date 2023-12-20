@@ -60,7 +60,9 @@ export async function POST(req: Request) {
         imageUrl,
       },
     })
-  } else if (eventType === 'user.updated') {
+  }
+
+  if (eventType === 'user.updated') {
     const currentUser = await prisma.user.findUnique({
       where: { externalUserId },
     })
@@ -74,6 +76,14 @@ export async function POST(req: Request) {
       data: {
         username,
         imageUrl,
+      },
+    })
+  }
+
+  if (eventType === 'user.deleted') {
+    await prisma.user.delete({
+      where: {
+        externalUserId,
       },
     })
   }
