@@ -1,1 +1,7 @@
-export const plugins = ["prettier-plugin-tailwindcss"];
+module.exports = {
+  plugins: ["prettier-plugin-tailwindcss"],
+  // todo: add more
+  semi: false,
+  jsxSingleQuote: true,
+  singleQuote: true,
+};

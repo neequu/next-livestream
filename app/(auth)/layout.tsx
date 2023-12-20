@@ -1,13 +1,13 @@
-import TheHeader from '@/components/TheHeader';
+import TheHeader from '@/components/TheHeader'
 import React from 'react'
 
-const AuthLayout = ({children}: {
-  children: React.ReactNode;
-}) => {
+const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-    <TheHeader/>
-    <section className='h-screen grid place-content-center'>{children}</section>
+      <TheHeader />
+      <section className='grid h-screen place-content-center'>
+        {children}
+      </section>
     </>
   )
 }
