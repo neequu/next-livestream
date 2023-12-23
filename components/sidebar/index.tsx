@@ -1,8 +1,13 @@
 import React from 'react'
-import SideBarWrapper from './SideBarWrapper'
+import SidebarWrapper from './SidebarWrapper'
+import SidebarToggle from './SidebarToggle'
 
 const Sidebar = () => {
-  return <SideBarWrapper>Sidebar</SideBarWrapper>
+  return (
+    <SidebarWrapper>
+      <SidebarToggle />
+    </SidebarWrapper>
+  )
 }
 
 export default Sidebar
