@@ -1,7 +1,7 @@
 import React from 'react'
 
-const page = ({ params }) => {
-  return <div>zcx {JSON.stringify(params?.q)}</div>
+const page = () => {
+  return <div>zcx</div>
 }
 
 export default page

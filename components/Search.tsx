@@ -26,14 +26,17 @@ const Search = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='flex w-[400px] sm:flex-none'>
+    <form
+      onSubmit={handleSubmit}
+      className='border-[rgb(59 130_246/0.5)] flex w-[400px] rounded-md border border-transparent transition-colors has-[input]:focus-within:border-[#3b82f6] sm:flex-none'
+    >
       <div className='relative flex-1'>
         <Input
           ref={inputElement}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder='Search'
-          className='rounded-r-none border-0 focus-visible:ring-0 focus-visible:ring-offset-0'
+          className='rounded-r-none border-0 bg-[#222028] focus-visible:ring-0 focus-visible:ring-offset-0'
         />
         <button
           onClick={clearInput}
@@ -44,7 +47,7 @@ const Search = () => {
           {input && <X className='w-5' />}
         </button>
       </div>
-      <Button variant='secondary' className='rounded-l-none'>
+      <Button variant='secondary' className='rounded-l-none bg-gray-700/20'>
         <SearchIcon className='h-5 w-5 text-muted-foreground' />
       </Button>
     </form>
