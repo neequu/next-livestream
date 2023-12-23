@@ -28,7 +28,7 @@ const Search = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='border-[rgb(59 130_246/0.5)] flex w-[400px] rounded-md border border-transparent transition-colors has-[input]:focus-within:border-[#3b82f6] sm:flex-none'
+      className='border-[rgb(59 130_246/0.5)] flex w-[400px] overflow-hidden rounded-md border-2 border-transparent transition-colors has-[input]:focus-within:border-[#90a6f6] sm:flex-none'
     >
       <div className='relative flex-1'>
         <Input
@@ -47,9 +47,9 @@ const Search = () => {
           {input && <X className='w-5' />}
         </button>
       </div>
-      <Button variant='secondary' className='rounded-l-none bg-gray-700/20'>
+      <button className='rounded-r-none bg-gray-700/20 px-4 py-2 transition-colors hover:bg-gray-700/40'>
         <SearchIcon className='h-5 w-5 text-muted-foreground' />
-      </Button>
+      </button>
     </form>
   )
 }
