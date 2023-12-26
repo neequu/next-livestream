@@ -41,14 +41,15 @@ const Search = () => {
         <button
           onClick={clearInput}
           type='button'
+          tabIndex={input ? 0 : -1}
           aria-label='clear input'
           className='absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground transition-opacity hover:opacity-70'
         >
           {input && <X className='w-5' />}
         </button>
       </div>
-      <button className='rounded-r-none bg-gray-700/20 px-4 py-2 transition-colors hover:bg-gray-700/40'>
-        <SearchIcon className='h-5 w-5 text-muted-foreground' />
+      <button className='rounded-r-none bg-gray-500/20 px-4 py-2 transition-colors hover:bg-gray-500/50'>
+        <SearchIcon className='size-5 text-muted-foreground' />
       </button>
     </form>
   )
