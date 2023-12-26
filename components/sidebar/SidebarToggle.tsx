@@ -23,7 +23,7 @@ const SidebarToggle = () => {
           </Hint>
         </div>
       ) : (
-        <div className='flex items-center justify-between p-2'>
+        <div className='hidden items-center justify-between p-2 sm:flex'>
           <p className='font-semibold'>Recommended</p>
           <Hint label={label}>
             <Button
