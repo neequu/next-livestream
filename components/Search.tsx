@@ -36,7 +36,7 @@ const Search = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder='Search'
-          className='rounded-r-none border-0 bg-[#222028] focus-visible:ring-0 focus-visible:ring-offset-0'
+          className='rounded-r-none border-0 bg-[#222028] pr-8 focus-visible:ring-0 focus-visible:ring-offset-0'
         />
         <button
           onClick={clearInput}

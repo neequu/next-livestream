@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider appearance={{ baseTheme: dark }}>
       <html lang='en'>
         <body
-          className={`${inter.className} flex h-full min-h-screen flex-col`}
+          className={`${inter.className} flex h-full min-h-screen min-w-[300px] flex-col`}
         >
           <ThemeProvider
             attribute='class'

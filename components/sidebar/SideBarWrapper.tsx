@@ -16,7 +16,7 @@ const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <aside
       className={cn(
-        'flex w-60 flex-col border-r border-gray-600/40 bg-gray-800 transition-[width_300]',
+        'flex w-60 flex-col border-r border-gray-600/40 bg-gray-800 px-4 py-2 transition-[width_300]',
         collapsed && 'w-[70px]',
       )}
     >

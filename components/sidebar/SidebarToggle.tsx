@@ -11,7 +11,7 @@ const SidebarToggle = () => {
   return (
     <>
       {collapsed ? (
-        <div className='hidden justify-center p-2 sm:flex'>
+        <div className='hidden justify-center sm:flex'>
           <Hint label={label}>
             <Button
               variant='ghost'
@@ -23,7 +23,7 @@ const SidebarToggle = () => {
           </Hint>
         </div>
       ) : (
-        <div className='hidden items-center justify-between p-2 sm:flex'>
+        <div className='hidden w-full items-center justify-between sm:flex'>
           <p className='font-semibold'>Recommended</p>
           <Hint label={label}>
             <Button
