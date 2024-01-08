@@ -1,15 +1,18 @@
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from '@clerk/nextjs'
 import prisma from '@/lib/prisma'
 
-async function getCurrentUser() {
+export async function getCurrentUser() {
   const clerkUser = await currentUser()
 
-  if (!clerkUser || !clerkUser.username)
-    throw new Error('Unathorized')
+  if (!clerkUser || !clerkUser.username) throw new Error('Unathorized')
 
+  const user = await prisma.user.findUnique({
+    where: { externalUserId: clerkUser.id },
+  })
 
-  const user = await prisma.user.
+  if (!user) throw new Error('Not found')
 
+  return user
 }
 
-export const  
+// export const
