@@ -1,8 +1,8 @@
 'use client'
 import { cn } from '@/lib/utils'
 import useSidebarStore from '@/stores/sidebarStore'
-import React, { useEffect } from 'react'
-import { useMediaQuery } from 'usehooks-ts'
+import { useEffect } from 'react'
+import { useMediaQuery, useIsClient } from 'usehooks-ts'
 
 const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
   const { collapsed, onCollapse, onExpand } = useSidebarStore((state) => state)
@@ -13,10 +13,17 @@ const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
     else onCollapse()
   }, [isMobile, onCollapse, onExpand])
 
+  if (!useIsClient)
+    return (
+      <aside className='flex w-[70px] flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:w-60 sm:px-4'>
+        loading
+      </aside>
+    )
+
   return (
     <aside
       className={cn(
-        'flex w-[70px] flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:px-4',
+        'flex w-[70px] flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:w-60 sm:px-4',
         !collapsed && 'w-60',
       )}
     >
