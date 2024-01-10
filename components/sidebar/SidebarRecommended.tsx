@@ -9,7 +9,7 @@ const SidebarRecommended = ({ data }: { data: User[] }) => {
       {hasData && (
         <ul>
           {data.map((user) => (
-            <li key={user.id}>
+            <li key={user.id} className='flex justify-center'>
               <UserItem
                 username={user.username}
                 imageUrl={user.imageUrl}

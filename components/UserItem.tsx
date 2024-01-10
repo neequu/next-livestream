@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation'
 import { Button } from './ui/button'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import UserAvatar from './UserAvatar'
-import LiveBadge from './LiveBadge'
+import UserAvatar from '@/components/UserAvatar'
+import LiveBadge from '@/components/LiveBadge'
 
 const UserItem = ({
   username,
@@ -28,7 +28,7 @@ const UserItem = ({
       asChild
       variant='ghost'
       className={cn(
-        'h-12 w-full px-2 hover:bg-gray-700',
+        'h-12 flex-1 hover:bg-gray-700 sm:px-2',
         isActive && 'bg-accent',
       )}
     >
