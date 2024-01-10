@@ -27,10 +27,7 @@ const UserItem = ({
     <Button
       asChild
       variant='ghost'
-      className={cn(
-        'h-12 flex-1 hover:bg-gray-700 sm:px-2',
-        isActive && 'bg-accent',
-      )}
+      className={cn('h-12 flex-1 sm:px-2', isActive && 'bg-accent')}
     >
       <Link href={href}>
         <div

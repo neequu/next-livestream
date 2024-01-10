@@ -11,26 +11,18 @@ const SidebarToggle = () => {
   return (
     <>
       {collapsed ? (
-        <div className='hidden justify-center sm:flex'>
+        <div className='mb-2 hidden justify-center sm:flex'>
           <Hint label={label}>
-            <Button
-              variant='ghost'
-              className='p-2 hover:bg-gray-700'
-              onClick={onExpand}
-            >
+            <Button variant='ghost' className='p-2 ' onClick={onExpand}>
               <ArrowRightFromLine className='size-5' />
             </Button>
           </Hint>
         </div>
       ) : (
-        <div className='hidden w-full items-center justify-between sm:flex'>
+        <div className='mb-2 hidden w-full items-center justify-between sm:flex'>
           <p className='font-semibold'>Recommended</p>
           <Hint label={label}>
-            <Button
-              variant='ghost'
-              className='p-2 hover:bg-gray-700'
-              onClick={onCollapse}
-            >
+            <Button variant='ghost' className='p-2' onClick={onCollapse}>
               <ArrowLeftFromLine className='size-5' />
             </Button>
           </Hint>
