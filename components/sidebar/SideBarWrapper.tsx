@@ -13,18 +13,11 @@ const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
     else onCollapse()
   }, [isMobile, onCollapse, onExpand])
 
-  if (!useIsClient)
-    return (
-      <aside className='flex w-[70px] flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:w-60 sm:px-4'>
-        loading
-      </aside>
-    )
-
   return (
     <aside
       className={cn(
-        'flex w-[70px] flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:w-60 sm:px-4',
-        !collapsed && 'w-60',
+        'flex w-60 flex-col border-r border-gray-600/40 bg-gray-800 py-2 transition-[width_300] sm:px-4',
+        collapsed && 'w-[70px]',
       )}
     >
       {children}
