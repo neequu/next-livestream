@@ -3,6 +3,7 @@ import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { cn } from '@/lib/utils'
 import LiveBadge from './LiveBadge'
+import { Skeleton } from './ui/skeleton'
 
 const avatarSizes = cva('', {
   variants: {
@@ -52,6 +53,11 @@ const UserAvatar = ({
       )}
     </div>
   )
+}
+interface UserAvatarSkeletonProps extends VariantProps<typeof avatarSizes> {}
+
+const UserAvatarSkeleton = ({ size }: UserAvatarSkeletonProps) => {
+  return <Skeleton className={cn('rounded-full', avatarSizes({ size }))} />
 }
 
 export default UserAvatar
